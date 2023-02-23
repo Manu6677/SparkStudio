@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Card from "./Card";
 
 const JuniorBtn = () => {
-  const [key, setKey] = useState(1);
+  const [key, setKey] = useState("");
   console.log(key);
 
   const junior = () => {
     setKey(0);
   };
-  console.log(key);
+
   return (
     <div>
       <button
         className="bg-color1light font-semibold rounded-lg w-20"
         onClick={() => junior()}
-        jun={key}
       >
         Junior
       </button>
+      <Card jun={key} />
     </div>
   );
 };

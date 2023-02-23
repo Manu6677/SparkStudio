@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-
+import Card1 from "./Card1";
 const SeniorBtn = () => {
-  const [key1, setKey1] = useState("");
+  const [key1, setKey1] = useState();
   const senior = () => {
     setKey1(1);
   };
@@ -13,6 +13,7 @@ const SeniorBtn = () => {
       >
         senior
       </button>
+      <Card1 sen={key1} />
     </div>
   );
 };

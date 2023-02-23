@@ -5,10 +5,17 @@ const Card = ({ jun }) => {
   console.log(jun);
   const [data] = useState(Data);
 
-  //   console.log(data);
+  // console.log(data);
   //   console.log(Object.values(data));
+
   return (
-    <div className="m-52 flex-col flex-wrap w-1/4 shadow-2xl cursor-pointer hover:scale-110 duration-300">
+    <div
+      className={`m-52 flex-col flex-wrap w-80 shadow-2xl cursor-pointer  ${
+        jun === 0
+          ? "scale-110 duration-300 m-52 flex-col flex-wrap w-1/4 shadow-2xl cursor-pointer"
+          : ""
+      }`}
+    >
       <div className="p-2">
         <div className="bg-color1dark">
           <div className="">

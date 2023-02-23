@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import Data from "./Data.json";
-const Card1 = () => {
+const Card1 = ({ sen }) => {
   const [data] = useState(Data);
+  console.log(sen);
   //   console.log(data);
   //   console.log(Object.values(data));
   return (
-    <div className="m-52 mr-36 flex-col flex-wrap w-1/4 shadow-2xl cursor-pointer hover:scale-110 duration-300">
+    <div
+      className={`m-52 flex-col flex-wrap w-80 shadow-2xl cursor-pointer  ${
+        sen === 1
+          ? "scale-110 duration-300 m-52 flex-col flex-wrap w-1/4 shadow-2xl cursor-pointer"
+          : ""
+      }`}
+    >
       <div className="p-2">
         <div className="bg-color1dark">
           <div className="">
